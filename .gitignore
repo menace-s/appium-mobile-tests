@@ -1,0 +1,3 @@
+.wdio/session/
+node_modules/
+apps/*.apk
