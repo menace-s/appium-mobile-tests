@@ -25,10 +25,11 @@
         "noFallthroughCasesInSwitch": true
     },
     "include": [
+        "_common",
         "pages",
         "flows",
         "specs",
         "support",
-        "config/wdio.conf.ts"
+        "wdio.conf.ts"
     ]
 }

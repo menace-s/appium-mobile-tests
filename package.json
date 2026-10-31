@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio run ./config/wdio.conf.ts",
-    "wdio": "wdio run ./config/wdio.conf.ts"
+    "test": "wdio run ./wdio.conf.ts",
+    "wdio": "wdio run ./wdio.conf.ts"
   },
   "keywords": [],
   "author": "",

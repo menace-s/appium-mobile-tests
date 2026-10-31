@@ -1,12 +1,12 @@
 export const config: WebdriverIO.Config = {
     runner: 'local',
-    tsConfigPath: '../tsconfig.json',
+    tsConfigPath: './tsconfig.json',
 
     port: 4723,
 
     // Specs: 1 fichier = 1 cas de test (voir TA MOBILE.md, section 2)
     specs: [
-        '../specs/**/*.ts'
+        './specs/**/*.ts'
     ],
     exclude: [],
 
@@ -14,19 +14,19 @@ export const config: WebdriverIO.Config = {
 
     // Capabilities pour l'app native "My Demo App" (Sauce Labs) sur émulateur Android
     // -> télécharger l'APK ici : https://github.com/saucelabs/my-demo-app-android/releases
-    //    et le placer dans ./apps/my-demo-app-android.apk
+    //    et le placer dans ./APK/my-demo-app-android.apk
     capabilities: [{
         platformName: 'Android',
         'appium:deviceName': 'Phone', // nom de l'AVD créé dans Android Studio
         'appium:avd': 'Phone',
         'appium:automationName': 'UiAutomator2',
-        'appium:app': require('path').join(process.cwd(), 'apps', 'my-demo-app-android.apk'),
+        'appium:app': require('path').join(process.cwd(), 'APK', 'my-demo-app-android.apk'),
         'appium:appWaitActivity': '*',
         'appium:avdLaunchTimeout': 120000,
         'appium:avdReadyTimeout': 120000
     }],
 
-    logLevel: 'info',
+    logLevel: 'warn',
     bail: 0,
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
